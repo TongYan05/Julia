@@ -1,0 +1,4 @@
+name,age,score
+Alice,20,85
+Bob,21,91
+Charlie,19,78
