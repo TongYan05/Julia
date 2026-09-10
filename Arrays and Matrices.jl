@@ -2,12 +2,16 @@
 # Vectors -> one-dimension array called a vector
 arr=[1,2,3,4,5,6,7,8]
 typeof(arr)
+arr=[1 2 3 4 5 6 7 8]
+typeof(arr)
+
 
 
 # Matrices -> a matrix is a two-dimension array
 A=[1 2;3      4] # space means next column, semicolon means next row
-B=[324 5234 734 724; 65426 5 2 42] # the elements in each row must be same
-
+B=[324 5234 734 724; 65426 5 2 42] 
+# the elements in each row must be same
+B[]
 
 # Julia Uses 1-Based Indexing -> the index start form 1 in an array
 # end -> the last index
@@ -15,6 +19,7 @@ arr[end]
 A[1,end]
 A[end]
 B[end,1]
+
 
 
 # Slicing
@@ -163,6 +168,5 @@ map(x->x%2 == 0 ? true : false,1:100)
 A = [1 2 3;
      4 5 6;
      7 8 9]
-
 v = [1, 2, 3]
 A*v

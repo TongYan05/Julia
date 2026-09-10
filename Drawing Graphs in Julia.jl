@@ -116,6 +116,7 @@ D=zeros(200,1000)
 for i in 1:1000
     D[:, i]=rand(200)
 end
+D
 heatmap(D)
 
 

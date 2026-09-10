@@ -130,6 +130,7 @@ b = [5.0, 6.0]
 A*b
 A.*b # they are different
 det(A)
+eigen(A)
 rank(A)
 # we wish Ax=b
 x=A\b

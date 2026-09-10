@@ -50,6 +50,7 @@ A=[4 1 2;
 A'
 A==A'
 
+
 vals, vecs = eigen(A)
 println(vals)
 println(vecs)

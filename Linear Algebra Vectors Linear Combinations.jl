@@ -90,14 +90,15 @@ Dependent vectors contain information we already have.
 v = [3, 2]
 w = [1, 4]
 v + w
-3v
+3v==v.*3
 v.*3+w.*4==[13,22]
 using LinearAlgebra
 dot(v,w)==11
 # length of vector
 norm(v)
 norm([3,4])
-v/norm(v)
+norm([1,2,3,4])
+v/norm(v)==v./norm(v)
 norm(v/norm(v)) #normalization
 m=[1,2,3]
 n=[4,5,6]
@@ -105,7 +106,7 @@ cross(m,n)==[-3,6,-3]
 
 # 17. Julia practice
 using  LinearAlgebra
-j=[3,4,5,7]
+j=[3,4,5,-7]
 k=[9,1,2,8]
 j+k==[12,5,7,15]
 (j+k).*2
@@ -122,7 +123,7 @@ cross(a, b)
 # 18. Drawing a 2D vector in Julia
 using Plots
 i=[1,9]
-o=[1,9]
+o=[1,5]
 plot(i,o,arrow=true,xlabel="x",ylabel="y",
         legend=:topright,
         xlims=(0,15), # the scope of x coordinate

@@ -75,10 +75,12 @@ typeof(0.0/0.0)
 
 # Checking for these values
 isfinite(10.0)
+10/3
+isfinite(10/3)
 isfinite(10.0/3)
 isfinite(Inf)
-isinf(10.0)
-isnan(NaN)
+isinf(10.0) # is infinite?
+isnan(NaN) # Not a number
 
 
 # A subtle thing about NaN
