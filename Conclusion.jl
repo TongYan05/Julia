@@ -142,3 +142,5 @@ A * E.vectors[:, 1] ≈ E.values[1] * E.vectors[:, 1]
 A * E.vectors[:, 2] ≈ E.values[2] * E.vectors[:, 2] 
 # 检验第 3 个特征值和特征向量
 A * E.vectors[:, 3] ≈ E.values[3] * E.vectors[:, 3] 
+
+#
