@@ -93,9 +93,13 @@ EXAMPLE:
 
 =#
 
+
+
 using Pkg
 Pkg.add("ForwardDiff")
 using ForwardDiff
+
+
 
 f(x) = x^3 - 2x +1
 ForwardDiff.derivative(f,2)
@@ -116,9 +120,18 @@ ForwardDiff.jacobian(B,x1)
 tr(ForwardDiff.jacobian(B,x1))
 # tr -> trace(迹) -> the sum of diagonal elements(对角元素)
 
-using QuadGK # ∫x²dx
+ # ∫x²dx
+using QuadGK
 f(x) = x^2
 result, error = quadgk(f, 0, 1)
 println(result) # Integral value
 println(error) # error estimate
 1/3==result
+
+
+using Cubature
+t(v)=3v[1]^3+2v[1]^2*v[2]^4-7v[2]^3*v[1]^2+11v[2]^2
+hcubature(t,[0,2],[10,8])
+
+m(n)=n[1]^2+n[2]^2+n[3]^2
+hcubature(m,[0,0,0],[1,1,1])
