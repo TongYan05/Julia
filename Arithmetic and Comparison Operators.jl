@@ -110,3 +110,33 @@ y=[2,5,8,0]
 y=y.+2
 y=y.^2
 y[1]
+
+
+using Gridap
+
+# 1. 建一个单位正方形网格，每边分8份
+domain = (0, 1, 0, 1)
+partition = (8, 8)
+model = CartesianDiscreteModel(domain, partition)
+
+# 2. 定义有限元空间（H1 连续元，2阶）
+order = 2
+reffe = ReferenceFE(lagrangian, Float64, order)
+V0 = TestFESpace(model, reffe, conformity=:H1, dirichlet_tags="boundary")
+U = TrialFESpace(V0, 0)
+
+# 3. 定义弱形式：∫∇v·∇u dΩ = ∫v·f dΩ
+f(x) = -2π^2 * sin(π*x[1]) * sin(π*x[2])   # 真解是 sin(πx)sin(πy)
+Ω = Triangulation(model)
+dΩ = Measure(Ω, 2*order)
+a(u, v) = ∫(∇(v) ⋅ ∇(u)) * dΩ
+l(v) = ∫(v * f) * dΩ
+
+# 4. 组装并求解
+op = AffineFEOperator(a, l, U, V0)
+uh = solve(op)
+
+exact_sol(x) = sin(π*x[1]) * sin(π*x[2])
+l2_err(u) = ∫((u - exact_sol) * (u - exact_sol)) * dΩ
+err = sqrt(l2_err(uh))
+println("L2 error = ", err)

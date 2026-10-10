@@ -1,0 +1,37 @@
+TWO DEMONSTRATION SHIPS: LOCAL CLAMPED OUTER PLATES
+Units m/N/Pa. E=210 GPa, nu=0.30, seawater density=1025 kg/m3.
+Q2 three-dimensional solid elements; all four panel edges fixed.
+
+CONTAINER VESSEL
+Appearance L/B/D: (110.0, 18.0, 8.0) m (illustrative hull)
+Panel a/b/t: (1.2, 0.65, 0.014) m
+Centre depth: 2.5 m; speed: 5.0 m/s; assumed Cp: 0.3
+Integrated force: 22605.862499999963 N; analytic force check passed
+Coarse/fine centre deflection: 0.23076153120630685 / 0.240150208821898 mm
+Relative mesh change: 3.909502166018955 %
+Energy-balance relative error: 9.025034932472405e-10
+Strain energy: 0.913590317309405 J; half load-work: 0.9135903181339234 J
+Max sampled loaded-face deflection: 0.2400440675968484 mm
+Max sampled loaded-face von Mises: 23.047144565938638 MPa
+Sample stress / assumed yield strength: 0.09807295559973887
+Deflection / thickness: 0.017146004828346315
+Mesh-change <5% screening: PASS for centre deflection only
+
+COASTAL PATROL VESSEL
+Appearance L/B/D: (36.0, 7.0, 4.0) m (illustrative hull)
+Panel a/b/t: (0.8, 0.45, 0.008) m
+Centre depth: 1.2 m; speed: 8.0 m/s; assumed Cp: 0.3
+Integrated force: 7886.268000000029 N; analytic force check passed
+Coarse/fine centre deflection: 0.21032629393003968 / 0.21946063698474827 mm
+Relative mesh change: 4.162178320544742 %
+Energy-balance relative error: 1.3573567720433332e-9
+Strain energy: 0.287672494096551 J; half load-work: 0.2876724944870252 J
+Max sampled loaded-face deflection: 0.21939330184887293 mm
+Max sampled loaded-face von Mises: 25.252960701184584 MPa
+Sample stress / assumed yield strength: 0.10745940723908334
+Deflection / thickness: 0.027424162731109116
+Mesh-change <5% screening: PASS for centre deflection only
+
+Limits: no actual lines plan, curved plating, stiffener flexibility, corrosion, welding, fatigue, buckling, plasticity, wave slamming or fluid coupling.
+Pressure=hydrostatic+assumed steady increment; not a classification-rule load.
+Sample stress maxima are not certified global extrema. No engineering approval implied.

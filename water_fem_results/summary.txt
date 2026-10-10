@@ -1,0 +1,36 @@
+Bridge pier under equivalent steady water drag
+Units: m, N, Pa
+Geometry: (3.0, 4.0, 12.0) m
+Mesh partition: (6, 8, 24)
+Hexahedral elements: 1152
+Water depth: 4.0 m
+Flow speed: 3.0 m/s
+Drag coefficient: 1.6
+Equivalent net drag traction: 7200.0 Pa
+Integrated water force along +Y: 86399.99999999999 N
+Integrated water moment about base X: -172799.99999999997 N*m
+Combined-case deck force: 1.2e7 N
+Combined-case self-weight: 3.5316e6 N
+
+WATER ONLY
+Mean top displacement vector: (2.3215766876862453e-18, 6.46200986697965e-6, 7.669233930882842e-8) m
+Max sampled displacement: 0.0065458390199636856 mm
+Max sampled flow-direction displacement: 0.006462078416443282 mm
+Sampled sigma_zz range: -0.02525809729231959 to 0.032270381049359205 MPa
+Max sampled Von Mises: 0.03472199234152935 MPa
+
+COMBINED
+Mean top displacement vector: (-7.949827726455236e-17, 6.462009867019467e-6, -0.0004280917100938477) m
+Max sampled displacement: 0.4293472835519932 mm
+Sampled sigma_zz range: -1.539281016948714 to -1.005699910679036 MPa
+Max sampled Von Mises: 1.3267731962467517 MPa
+
+The water load is an equivalent NET drag distribution.
+It is not a computed CFD wall-pressure distribution.
+Static linear elasticity; no transient or fluid coupling.
+No hydrostatic pressure, scour, soil or concrete cracking.
+Cloud plots show sampled Y-Z middle-section values.
+Reported sample maxima are not global extrema.
+Refine the mesh to assess convergence.
+Fixed-base local stress peaks may be mesh-sensitive.
+Von Mises is not used as a concrete failure criterion.
